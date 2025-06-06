@@ -14,7 +14,7 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Navigation Menu moved to header right side */}
+            {/* Navigation Menu - moved to center-right */}
             <nav className="flex items-center space-x-1">
               <ul className="flex">
                 <li className="relative group">
