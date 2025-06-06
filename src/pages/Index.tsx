@@ -1,3 +1,4 @@
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-white font-opensans">
@@ -23,7 +24,7 @@ const Index = () => {
       {/* Navigation Menu - matching #headerbg */}
       <nav className="text-white" style={{ backgroundColor: 'darkslategray' }}>
         <div className="max-w-6xl mx-auto px-4">
-          <ul className="flex">
+          <ul className="flex justify-end">
             <li className="relative group">
               <a href="/" className="block px-4 py-3 hover:bg-gray-600 transition-colors">Home</a>
             </li>
