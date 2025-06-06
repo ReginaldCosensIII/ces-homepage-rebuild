@@ -1,4 +1,5 @@
 
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-white font-opensans">
@@ -24,31 +25,44 @@ const Index = () => {
       {/* Navigation Menu - matching #headerbg */}
       <nav className="text-white" style={{ backgroundColor: 'darkslategray' }}>
         <div className="max-w-6xl mx-auto px-4">
-          <ul className="flex justify-end">
-            <li className="relative group">
-              <a href="/" className="block px-4 py-3 hover:bg-gray-600 transition-colors">Home</a>
-            </li>
-            <li className="relative group">
-              <a href="/about" className="block px-4 py-3 hover:bg-gray-600 transition-colors">About Us</a>
-            </li>
-            <li className="relative group">
-              <a href="/services" className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer">Services ▼</a>
-              <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
-                <li><a href="/computer-repair" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Computer Repair</a></li>
-                <li><a href="/network-setup" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Network Setup</a></li>
-                <li><a href="/data-recovery" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Data Recovery</a></li>
-                <li><a href="/virus-removal" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Virus Removal</a></li>
-                <li><a href="/software-installation" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Software Installation</a></li>
-                <li><a href="/hardware-upgrades" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Hardware Upgrades</a></li>
-              </ul>
-            </li>
-            <li className="relative group">
-              <a href="/support" className="block px-4 py-3 hover:bg-gray-600 transition-colors">Support</a>
-            </li>
-            <li className="relative group">
-              <a href="/contact" className="block px-4 py-3 hover:bg-gray-600 transition-colors">Contact</a>
-            </li>
-          </ul>
+          <div className="flex justify-between items-center">
+            {/* Action Buttons - Left Side */}
+            <div className="flex gap-3 py-2">
+              <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-4 py-2 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse">
+                📞 BOOK A 15 MINUTE CALL
+              </button>
+              <button className="bg-red-500 hover:bg-red-600 text-white font-bold px-4 py-2 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse">
+                🔒 FREE CYBERSECURITY SCAN
+              </button>
+            </div>
+            
+            {/* Navigation Menu - Right Side */}
+            <ul className="flex">
+              <li className="relative group">
+                <a href="/" className="block px-4 py-3 hover:bg-gray-600 transition-colors">Home</a>
+              </li>
+              <li className="relative group">
+                <a href="/about" className="block px-4 py-3 hover:bg-gray-600 transition-colors">About Us</a>
+              </li>
+              <li className="relative group">
+                <a href="/services" className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer">Services ▼</a>
+                <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
+                  <li><a href="/computer-repair" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Computer Repair</a></li>
+                  <li><a href="/network-setup" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Network Setup</a></li>
+                  <li><a href="/data-recovery" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Data Recovery</a></li>
+                  <li><a href="/virus-removal" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Virus Removal</a></li>
+                  <li><a href="/software-installation" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Software Installation</a></li>
+                  <li><a href="/hardware-upgrades" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Hardware Upgrades</a></li>
+                </ul>
+              </li>
+              <li className="relative group">
+                <a href="/support" className="block px-4 py-3 hover:bg-gray-600 transition-colors">Support</a>
+              </li>
+              <li className="relative group">
+                <a href="/contact" className="block px-4 py-3 hover:bg-gray-600 transition-colors">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
 
@@ -212,3 +226,4 @@ const Index = () => {
 };
 
 export default Index;
+
