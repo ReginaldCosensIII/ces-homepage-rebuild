@@ -1,8 +1,14 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
+import { useToast } from '@/hooks/use-toast';
+import { MapPin, Phone, Mail, Clock, Users, Shield } from 'lucide-react';
 
 const Contact = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,8 +30,22 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Here you would typically send the data to your backend
-    alert('Thank you for your request! We will contact you shortly.');
+    
+    toast({
+      title: "Request Submitted!",
+      description: "Thank you for your request. We will contact you within 24 hours.",
+    });
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      company: '',
+      serviceType: '',
+      message: '',
+      urgency: 'normal'
+    });
   };
 
   return (
@@ -52,178 +72,355 @@ const Contact = () => {
       {/* Navigation Menu */}
       <nav className="text-white" style={{ backgroundColor: 'darkslategray' }}>
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex justify-center items-center py-3">
-            <a href="/" className="text-white hover:text-gray-300 transition-colors">← Back to Home</a>
+          <div className="flex justify-between items-center">
+            {/* Action Buttons - Left Side */}
+            <div className="flex gap-3 py-2 mr-6">
+              <button 
+                onClick={() => window.location.href = '/contact'}
+                className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-2 py-1 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs"
+              >
+                📞 BOOK A 15 MINUTE CALL
+              </button>
+              <button 
+                onClick={() => window.location.href = '/contact'}
+                className="bg-red-500 hover:bg-red-600 text-white font-bold px-2 py-1 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs"
+              >
+                🔒 FREE CYBERSECURITY SCAN
+              </button>
+              <button 
+                onClick={() => window.location.href = '/contact'}
+                className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-2 py-1 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs"
+              >
+                🔧 SCHEDULE ON-SITE SERVICE
+              </button>
+            </div>
+            
+            {/* Navigation Menu - Right Side */}
+            <ul className="flex">
+              <li className="relative group">
+                <a href="/" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Home</a>
+              </li>
+              <li className="relative group">
+                <a href="/about" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">About Us</a>
+              </li>
+              <li className="relative group">
+                <a href="/services" className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Services ▼</a>
+                <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
+                  <li><a href="/computer-repair" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Computer Repair</a></li>
+                  <li><a href="/network-setup" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Network Setup</a></li>
+                  <li><a href="/data-recovery" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Data Recovery</a></li>
+                  <li><a href="/virus-removal" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Virus Removal</a></li>
+                  <li><a href="/software-installation" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Software Installation</a></li>
+                  <li><a href="/hardware-upgrades" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Hardware Upgrades</a></li>
+                </ul>
+              </li>
+              <li className="relative group">
+                <a href="/solutions" className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Solutions ▼</a>
+                <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
+                  <li><a href="/products" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Products</a></li>
+                  <li><a href="/cloud-solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Cloud Solutions</a></li>
+                  <li><a href="/software-solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Software Solutions</a></li>
+                  <li><a href="/forensic-analysis" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Forensic Analysis</a></li>
+                  <li><a href="/data-recovery-business" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Data Recovery</a></li>
+                  <li><a href="/disaster-recovery" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Disaster Recovery</a></li>
+                  <li><a href="/offsite-backup" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Off-Site Backup</a></li>
+                  <li><a href="/database-implementation" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Database Implementation</a></li>
+                </ul>
+              </li>
+              <li className="relative group">
+                <a href="/support" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Support</a>
+              </li>
+              <li className="relative group">
+                <a href="/contact" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Contact</a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
 
-      {/* Contact Form Section */}
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-center mb-2" style={{ color: '#660033' }}>Contact CES Inc</h2>
-          <p className="text-center text-gray-600 mb-8">
-            Ready to get started? Fill out the form below and we'll get back to you promptly.
-          </p>
+      {/* Page Header */}
+      <div className="bg-gradient-to-r from-gray-50 to-gray-100 py-12">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h1 className="text-4xl font-bold mb-4" style={{ color: '#660033' }}>Contact CES Inc</h1>
+          <p className="text-xl text-gray-600">Get in touch with our IT experts today</p>
+        </div>
+      </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Full Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  placeholder="Your full name"
-                />
-              </div>
+      {/* Main Content */}
+      <div className="max-w-6xl mx-auto px-4 py-12">
+        <div className="grid lg:grid-cols-3 gap-12">
+          
+          {/* Contact Form - Left Column */}
+          <div className="lg:col-span-2">
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h2 className="text-2xl font-bold mb-6" style={{ color: '#660033' }}>Send Us a Message</h2>
+              
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <Label htmlFor="name">Full Name *</Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="Your full name"
+                      className="mt-1"
+                    />
+                  </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  placeholder="your.email@example.com"
-                />
-              </div>
+                  <div>
+                    <Label htmlFor="email">Email Address *</Label>
+                    <Input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="your.email@example.com"
+                      className="mt-1"
+                    />
+                  </div>
 
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                  Phone Number *
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  required
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  placeholder="(555) 123-4567"
-                />
-              </div>
+                  <div>
+                    <Label htmlFor="phone">Phone Number *</Label>
+                    <Input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      required
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="(555) 123-4567"
+                      className="mt-1"
+                    />
+                  </div>
 
-              <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                  Company (Optional)
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  placeholder="Your company name"
-                />
+                  <div>
+                    <Label htmlFor="company">Company (Optional)</Label>
+                    <Input
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      placeholder="Your company name"
+                      className="mt-1"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <Label htmlFor="serviceType">Service Needed *</Label>
+                  <select
+                    id="serviceType"
+                    name="serviceType"
+                    required
+                    value={formData.serviceType}
+                    onChange={handleInputChange}
+                    className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="consultation">15 Minute Consultation Call</option>
+                    <option value="cybersecurity">Free Cybersecurity Scan</option>
+                    <option value="onsite">Schedule On-Site Service</option>
+                    <option value="computer-repair">Computer Repair</option>
+                    <option value="network-setup">Network Setup</option>
+                    <option value="data-recovery">Data Recovery</option>
+                    <option value="virus-removal">Virus Removal</option>
+                    <option value="cloud-solutions">Cloud Solutions</option>
+                    <option value="software-solutions">Software Solutions</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <Label htmlFor="urgency">Urgency Level</Label>
+                  <select
+                    id="urgency"
+                    name="urgency"
+                    value={formData.urgency}
+                    onChange={handleInputChange}
+                    className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  >
+                    <option value="normal">Normal (2-3 business days)</option>
+                    <option value="urgent">Urgent (24 hours)</option>
+                    <option value="emergency">Emergency (Same day)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <Label htmlFor="message">Message *</Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    placeholder="Please describe your IT needs or issues in detail..."
+                    className="mt-1"
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  className="w-full text-lg font-semibold py-3"
+                  style={{ backgroundColor: '#660033' }}
+                >
+                  Submit Request
+                </Button>
+              </form>
+            </div>
+          </div>
+
+          {/* Contact Information - Right Column */}
+          <div className="space-y-6">
+            
+            {/* Contact Details */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-bold mb-4" style={{ color: '#660033' }}>Get In Touch</h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-5 h-5 mt-1" style={{ color: '#660033' }} />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Address</h4>
+                    <p className="text-gray-600">123 Tech Street<br />Computer City, TC 12345</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3">
+                  <Phone className="w-5 h-5 mt-1" style={{ color: '#660033' }} />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Phone</h4>
+                    <p className="text-gray-600">(555) 123-4567</p>
+                    <p className="text-sm text-gray-500">Emergency: (555) 911-TECH</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3">
+                  <Mail className="w-5 h-5 mt-1" style={{ color: '#660033' }} />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Email</h4>
+                    <p className="text-gray-600">info@cesitservice.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3">
+                  <Clock className="w-5 h-5 mt-1" style={{ color: '#660033' }} />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Business Hours</h4>
+                    <p className="text-gray-600">
+                      Monday - Friday: 8:00 AM - 6:00 PM<br />
+                      Saturday: 9:00 AM - 4:00 PM<br />
+                      Sunday: Emergency Only
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div>
-              <label htmlFor="serviceType" className="block text-sm font-medium text-gray-700 mb-2">
-                Service Needed *
-              </label>
-              <select
-                id="serviceType"
-                name="serviceType"
-                required
-                value={formData.serviceType}
-                onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-              >
-                <option value="">Select a service</option>
-                <option value="consultation">15 Minute Consultation Call</option>
-                <option value="cybersecurity">Free Cybersecurity Scan</option>
-                <option value="onsite">Schedule On-Site Service</option>
-                <option value="computer-repair">Computer Repair</option>
-                <option value="network-setup">Network Setup</option>
-                <option value="data-recovery">Data Recovery</option>
-                <option value="virus-removal">Virus Removal</option>
-                <option value="cloud-solutions">Cloud Solutions</option>
-                <option value="software-solutions">Software Solutions</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <div>
-              <label htmlFor="urgency" className="block text-sm font-medium text-gray-700 mb-2">
-                Urgency Level
-              </label>
-              <select
-                id="urgency"
-                name="urgency"
-                value={formData.urgency}
-                onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-              >
-                <option value="normal">Normal (2-3 business days)</option>
-                <option value="urgent">Urgent (24 hours)</option>
-                <option value="emergency">Emergency (Same day)</option>
-              </select>
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                Message *
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows={5}
-                value={formData.message}
-                onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                placeholder="Please describe your IT needs or issues in detail..."
-              />
-            </div>
-
-            <div className="text-center">
-              <Button
-                type="submit"
-                className="px-8 py-3 text-lg font-semibold"
-                style={{ backgroundColor: '#660033' }}
-              >
-                Submit Request
-              </Button>
-            </div>
-          </form>
-
-          {/* Contact Information */}
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <h3 className="font-bold text-lg mb-2" style={{ color: '#660033' }}>Call Us</h3>
-                <p className="text-gray-600">(555) 123-4567</p>
-                <p className="text-sm text-gray-500">Mon-Fri: 8AM-6PM</p>
+            {/* Google Map */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <h3 className="text-xl font-bold p-4 border-b" style={{ color: '#660033' }}>Our Location</h3>
+              <div className="h-64">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316e4a2d55%3A0x3b2e6a5c2b8b8b8b!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1629814230000!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
-              <div>
-                <h3 className="font-bold text-lg mb-2" style={{ color: '#660033' }}>Email Us</h3>
-                <p className="text-gray-600">info@cesitservice.com</p>
-                <p className="text-sm text-gray-500">We respond within 24 hours</p>
+            </div>
+
+            {/* Quick Stats */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-bold mb-4" style={{ color: '#660033' }}>Why Choose Us</h3>
+              
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <Users className="w-5 h-5" style={{ color: '#660033' }} />
+                  <span className="text-gray-600">500+ Satisfied Customers</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Shield className="w-5 h-5" style={{ color: '#660033' }} />
+                  <span className="text-gray-600">15+ Years Experience</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Clock className="w-5 h-5" style={{ color: '#660033' }} />
+                  <span className="text-gray-600">24/7 Emergency Support</span>
+                </div>
               </div>
-              <div>
-                <h3 className="font-bold text-lg mb-2" style={{ color: '#660033' }}>Emergency</h3>
-                <p className="text-gray-600">(555) 911-TECH</p>
-                <p className="text-sm text-gray-500">24/7 Critical Support</p>
+
+              <div className="mt-6 pt-4 border-t">
+                <p className="text-sm text-gray-600">
+                  <strong>Free Estimates:</strong> Get a no-obligation quote for your project
+                </p>
+                <p className="text-sm text-gray-600 mt-2">
+                  <strong>Satisfaction Guaranteed:</strong> We stand behind our work
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="text-white mt-12" style={{ backgroundColor: 'darkslategray' }}>
+        <div className="max-w-6xl mx-auto px-4 py-8">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h4 className="font-bold mb-4" style={{ color: '#660033' }}>CES Inc</h4>
+              <p className="text-sm text-gray-300 mb-4">
+                Computer Enhancement Systems Inc - Your trusted IT partner since 2008.
+              </p>
+              <div className="text-sm text-gray-300">
+                <div className="mb-1">(555) 123-4567</div>
+                <div>info@cesitservice.com</div>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="font-bold mb-4">Services</h4>
+              <ul className="text-sm text-gray-300 space-y-2">
+                <li><a href="/computer-repair" className="hover:text-white transition-colors">Computer Repair</a></li>
+                <li><a href="/network-setup" className="hover:text-white transition-colors">Network Setup</a></li>
+                <li><a href="/data-recovery" className="hover:text-white transition-colors">Data Recovery</a></li>
+                <li><a href="/virus-removal" className="hover:text-white transition-colors">Virus Removal</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-bold mb-4">Solutions</h4>
+              <ul className="text-sm text-gray-300 space-y-2">
+                <li><a href="/cloud-solutions" className="hover:text-white transition-colors">Cloud Solutions</a></li>
+                <li><a href="/software-solutions" className="hover:text-white transition-colors">Software Solutions</a></li>
+                <li><a href="/disaster-recovery" className="hover:text-white transition-colors">Disaster Recovery</a></li>
+                <li><a href="/database-implementation" className="hover:text-white transition-colors">Database Implementation</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-bold mb-4">Quick Links</h4>
+              <ul className="text-sm text-gray-300 space-y-2">
+                <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
+                <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
+                <li><a href="/support" className="hover:text-white transition-colors">Support</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="border-t border-gray-600 mt-8 pt-6 text-center text-sm text-gray-400">
+            <p>&copy; 2024 CES Inc - Computer Enhancement Systems Inc. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
