@@ -10,7 +10,7 @@ const Index = () => {
               <img src="/placeholder.svg" alt="CES Inc Logo" className="w-12 h-12 mr-3" />
               <div>
                 <h1 className="text-2xl font-bold" style={{ color: '#660033' }}>CES Inc</h1>
-                <p className="text-sm text-gray-600">Computer Enhancement Services Inc</p>
+                <p className="text-sm text-gray-600">Computer Enhancement Systems Inc</p>
               </div>
             </div>
             <div className="text-right text-sm text-gray-700">
@@ -26,14 +26,23 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center">
             {/* Action Buttons - Left Side */}
-            <div className="flex gap-2 py-2">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-3 py-2 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs">
+            <div className="flex gap-4 py-2 mr-8">
+              <button 
+                onClick={() => window.location.href = '/contact'}
+                className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-2 py-1.5 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs"
+              >
                 📞 BOOK A 15 MINUTE CALL
               </button>
-              <button className="bg-red-500 hover:bg-red-600 text-white font-bold px-3 py-2 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs">
+              <button 
+                onClick={() => window.location.href = '/contact'}
+                className="bg-red-500 hover:bg-red-600 text-white font-bold px-2 py-1.5 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs"
+              >
                 🔒 FREE CYBERSECURITY SCAN
               </button>
-              <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-3 py-2 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs">
+              <button 
+                onClick={() => window.location.href = '/contact'}
+                className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-2 py-1.5 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs"
+              >
                 🔧 SCHEDULE ON-SITE SERVICE
               </button>
             </div>
@@ -41,13 +50,13 @@ const Index = () => {
             {/* Navigation Menu - Right Side */}
             <ul className="flex">
               <li className="relative group">
-                <a href="/" className="block px-4 py-3 hover:bg-gray-600 transition-colors">Home</a>
+                <a href="/" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Home</a>
               </li>
               <li className="relative group">
-                <a href="/about" className="block px-4 py-3 hover:bg-gray-600 transition-colors">About Us</a>
+                <a href="/about" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">About Us</a>
               </li>
               <li className="relative group">
-                <a href="/services" className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer">Services ▼</a>
+                <a href="/services" className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Services ▼</a>
                 <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
                   <li><a href="/computer-repair" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Computer Repair</a></li>
                   <li><a href="/network-setup" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Network Setup</a></li>
@@ -58,7 +67,7 @@ const Index = () => {
                 </ul>
               </li>
               <li className="relative group">
-                <a href="/business-solutions" className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer">Business Solutions ▼</a>
+                <a href="/solutions" className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Solutions ▼</a>
                 <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
                   <li><a href="/products" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Products</a></li>
                   <li><a href="/cloud-solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Cloud Solutions</a></li>
@@ -71,10 +80,10 @@ const Index = () => {
                 </ul>
               </li>
               <li className="relative group">
-                <a href="/support" className="block px-4 py-3 hover:bg-gray-600 transition-colors">Support</a>
+                <a href="/support" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Support</a>
               </li>
               <li className="relative group">
-                <a href="/contact" className="block px-4 py-3 hover:bg-gray-600 transition-colors">Contact</a>
+                <a href="/contact" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Contact</a>
               </li>
             </ul>
           </div>
@@ -102,7 +111,7 @@ const Index = () => {
               <div className="p-4 mb-6 rounded-md" style={{ backgroundColor: '#eee', border: '2px', borderRadius: '5px', padding: '16px', margin: '16px 0' }}>
                 <h2 className="text-2xl font-bold mb-4" style={{ color: '#660033' }}>Welcome to CES Inc</h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Computer Enhancement Services Inc (CES Inc) has been providing reliable computer and IT services 
+                  Computer Enhancement Systems Inc (CES Inc) has been providing reliable computer and IT services 
                   to businesses and individuals for over 15 years. Our experienced technicians are dedicated to 
                   keeping your technology running smoothly and efficiently.
                 </p>
@@ -210,7 +219,7 @@ const Index = () => {
             <div>
               <h4 className="font-bold mb-3">CES Inc</h4>
               <p className="text-sm text-gray-300">
-                Computer Enhancement Services Inc - Your trusted IT partner since 2008.
+                Computer Enhancement Systems Inc - Your trusted IT partner since 2008.
               </p>
             </div>
             <div>
@@ -232,7 +241,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-gray-600 mt-6 pt-4 text-center text-sm text-gray-400">
-            <p>&copy; 2024 CES Inc - Computer Enhancement Services Inc. All rights reserved.</p>
+            <p>&copy; 2024 CES Inc - Computer Enhancement Systems Inc. All rights reserved.</p>
           </div>
         </div>
       </footer>
