@@ -1,3 +1,4 @@
+
 const Support = () => {
   return (
     <div className="min-h-screen bg-white font-opensans">
@@ -73,28 +74,6 @@ const Support = () => {
           <p className="text-gray-700 leading-relaxed mb-4">
             Our experienced support team is available to assist you with all your technology needs. We provide comprehensive support services to keep your systems running smoothly.
           </p>
-
-          {/* Action Buttons - Horizontal Layout */}
-          <div className="flex justify-center gap-4 mt-6 mb-8">
-            <button 
-              onClick={() => window.location.href = '/contact-form'}
-              className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm h-16 flex items-center justify-center"
-            >
-              📞 BOOK A 15 MINUTE CALL
-            </button>
-            <button 
-              onClick={() => window.location.href = '/contact-form'}
-              className="bg-red-500 hover:bg-red-600 text-white font-bold px-6 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm h-16 flex items-center justify-center"
-            >
-              🔒 FREE CYBERSECURITY SCAN
-            </button>
-            <button 
-              onClick={() => window.location.href = '/contact-form'}
-              className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-6 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm h-16 flex items-center justify-center"
-            >
-              🔧 SCHEDULE ON-SITE SERVICE
-            </button>
-          </div>
 
           {/* Support Overview */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">
