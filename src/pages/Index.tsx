@@ -28,13 +28,13 @@ const Index = () => {
             {/* Navigation Menu - Full Width */}
             <ul className="flex w-full justify-center">
               <li className="relative group">
-                <a href="/" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Home</a>
+                <a href="/" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">Home</a>
               </li>
               <li className="relative group">
-                <a href="/about" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">About Us</a>
+                <a href="/about" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">About Us</a>
               </li>
               <li className="relative group">
-                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Services ▼</span>
+                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer whitespace-nowrap text-center">Managed Services ▼</span>
                 <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
                   <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Computer Repair</a></li>
                   <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Network Setup</a></li>
@@ -45,7 +45,7 @@ const Index = () => {
                 </ul>
               </li>
               <li className="relative group">
-                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Solutions ▼</span>
+                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer whitespace-nowrap text-center">Business Solutions ▼</span>
                 <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
                   <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Products</a></li>
                   <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Cloud Solutions</a></li>
@@ -58,10 +58,10 @@ const Index = () => {
                 </ul>
               </li>
               <li className="relative group">
-                <a href="/support" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Support</a>
+                <a href="/support" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">Support</a>
               </li>
               <li className="relative group">
-                <a href="/contact" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Contact</a>
+                <a href="/contact" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">Contact</a>
               </li>
             </ul>
           </div>
@@ -98,23 +98,23 @@ const Index = () => {
                   solutions for all your technology needs. Contact us today for fast, professional service you can trust.
                 </p>
                 
-                {/* Action Buttons - Centered and Taller */}
-                <div className="flex flex-col items-center gap-4 mt-6">
+                {/* Action Buttons - Horizontal Layout */}
+                <div className="flex justify-center gap-4 mt-6">
                   <button 
                     onClick={() => window.location.href = '/contact-form'}
-                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm w-64 h-16 flex items-center justify-center"
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm h-16 flex items-center justify-center"
                   >
                     📞 BOOK A 15 MINUTE CALL
                   </button>
                   <button 
                     onClick={() => window.location.href = '/contact-form'}
-                    className="bg-red-500 hover:bg-red-600 text-white font-bold px-8 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm w-64 h-16 flex items-center justify-center"
+                    className="bg-red-500 hover:bg-red-600 text-white font-bold px-6 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm h-16 flex items-center justify-center"
                   >
                     🔒 FREE CYBERSECURITY SCAN
                   </button>
                   <button 
                     onClick={() => window.location.href = '/contact-form'}
-                    className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-8 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm w-64 h-16 flex items-center justify-center"
+                    className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-6 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm h-16 flex items-center justify-center"
                   >
                     🔧 SCHEDULE ON-SITE SERVICE
                   </button>
@@ -124,31 +124,31 @@ const Index = () => {
               {/* Services Overview */}
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-white p-5 border border-gray-200 shadow-sm">
-                  <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Computer Repair</h3>
+                  <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Business Solutions</h3>
                   <p className="text-gray-700 text-sm leading-relaxed">
-                    Professional diagnosis and repair of desktop and laptop computers. We fix hardware issues, 
-                    replace components, and ensure your computer runs like new.
+                    Comprehensive IT solutions tailored to your business needs. From cloud migration to 
+                    infrastructure optimization, we help streamline your technology operations.
                   </p>
                 </div>
                 <div className="bg-white p-5 border border-gray-200 shadow-sm">
-                  <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Network Setup</h3>
+                  <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Security Assessments</h3>
                   <p className="text-gray-700 text-sm leading-relaxed">
-                    Complete network installation and configuration for homes and businesses. Secure wireless 
-                    networks, file sharing, and remote access solutions.
+                    Professional cybersecurity evaluations to identify vulnerabilities and strengthen your 
+                    defenses. Complete risk analysis and remediation strategies for total protection.
                   </p>
                 </div>
                 <div className="bg-white p-5 border border-gray-200 shadow-sm">
-                  <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Data Recovery</h3>
+                  <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Technical Support</h3>
                   <p className="text-gray-700 text-sm leading-relaxed">
-                    Professional data recovery services for crashed hard drives, corrupted files, and deleted data. 
-                    We use advanced tools to recover your valuable information.
+                    24/7 technical support services to keep your systems running smoothly. Remote and 
+                    on-site assistance for all your technology challenges and maintenance needs.
                   </p>
                 </div>
                 <div className="bg-white p-5 border border-gray-200 shadow-sm">
-                  <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Virus Removal</h3>
+                  <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Products</h3>
                   <p className="text-gray-700 text-sm leading-relaxed">
-                    Complete virus and malware removal services. We clean infected computers and install 
-                    protection software to prevent future infections.
+                    Quality hardware and software products from leading manufacturers. Custom 
+                    configurations and enterprise-grade solutions for businesses of all sizes.
                   </p>
                 </div>
               </div>

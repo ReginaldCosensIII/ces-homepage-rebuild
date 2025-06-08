@@ -26,13 +26,13 @@ const Solutions = () => {
           <div className="flex justify-between items-center">
             <ul className="flex w-full justify-center">
               <li className="relative group">
-                <a href="/" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Home</a>
+                <a href="/" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">Home</a>
               </li>
               <li className="relative group">
-                <a href="/about" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">About Us</a>
+                <a href="/about" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">About Us</a>
               </li>
               <li className="relative group">
-                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Services ▼</span>
+                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer whitespace-nowrap text-center">Managed Services ▼</span>
                 <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
                   <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Computer Repair</a></li>
                   <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Network Setup</a></li>
@@ -43,7 +43,7 @@ const Solutions = () => {
                 </ul>
               </li>
               <li className="relative group">
-                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Solutions ▼</span>
+                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer whitespace-nowrap text-center">Business Solutions ▼</span>
                 <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
                   <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Products</a></li>
                   <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Cloud Solutions</a></li>
@@ -56,10 +56,10 @@ const Solutions = () => {
                 </ul>
               </li>
               <li className="relative group">
-                <a href="/support" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Support</a>
+                <a href="/support" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">Support</a>
               </li>
               <li className="relative group">
-                <a href="/contact" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Contact</a>
+                <a href="/contact" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">Contact</a>
               </li>
             </ul>
           </div>
@@ -72,10 +72,32 @@ const Solutions = () => {
         <div className="absolute inset-0 bg-white bg-opacity-90"></div>
 
         <div className="relative z-10">
-          <h2 className="text-2xl font-bold mb-4" style={{ color: '#660033' }}>Our Solutions</h2>
+          <h2 className="text-2xl font-bold mb-4" style={{ color: '#660033' }}>Business Solutions</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            We offer a range of solutions to meet your technology needs. From cloud services to data recovery, we have you covered.
+            We offer comprehensive business solutions designed to enhance your operational efficiency and drive growth. From strategic technology planning to implementation and ongoing support.
           </p>
+
+          {/* Action Buttons - Horizontal Layout */}
+          <div className="flex justify-center gap-4 mt-6 mb-8">
+            <button 
+              onClick={() => window.location.href = '/contact-form'}
+              className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm h-16 flex items-center justify-center"
+            >
+              📞 BOOK A 15 MINUTE CALL
+            </button>
+            <button 
+              onClick={() => window.location.href = '/contact-form'}
+              className="bg-red-500 hover:bg-red-600 text-white font-bold px-6 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm h-16 flex items-center justify-center"
+            >
+              🔒 FREE CYBERSECURITY SCAN
+            </button>
+            <button 
+              onClick={() => window.location.href = '/contact-form'}
+              className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-6 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm h-16 flex items-center justify-center"
+            >
+              🔧 SCHEDULE ON-SITE SERVICE
+            </button>
+          </div>
 
           {/* Solutions Overview */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">

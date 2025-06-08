@@ -26,13 +26,13 @@ const Support = () => {
           <div className="flex justify-between items-center">
             <ul className="flex w-full justify-center">
               <li className="relative group">
-                <a href="/" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Home</a>
+                <a href="/" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">Home</a>
               </li>
               <li className="relative group">
-                <a href="/about" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">About Us</a>
+                <a href="/about" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">About Us</a>
               </li>
               <li className="relative group">
-                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Services ▼</span>
+                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer whitespace-nowrap text-center">Managed Services ▼</span>
                 <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
                   <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Computer Repair</a></li>
                   <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Network Setup</a></li>
@@ -43,7 +43,7 @@ const Support = () => {
                 </ul>
               </li>
               <li className="relative group">
-                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Solutions ▼</span>
+                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer whitespace-nowrap text-center">Business Solutions ▼</span>
                 <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
                   <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Products</a></li>
                   <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Cloud Solutions</a></li>
@@ -56,10 +56,10 @@ const Support = () => {
                 </ul>
               </li>
               <li className="relative group">
-                <a href="/support" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Support</a>
+                <a href="/support" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">Support</a>
               </li>
               <li className="relative group">
-                <a href="/contact" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Contact</a>
+                <a href="/contact" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">Contact</a>
               </li>
             </ul>
           </div>
@@ -72,98 +72,58 @@ const Support = () => {
         <div className="absolute inset-0 bg-white bg-opacity-90"></div>
 
         <div className="relative z-10">
-          <div className="flex gap-6">
-            {/* Main Content */}
-            <div className="flex-1">
-              {/* Support Section */}
-              <div className="p-4 mb-6 rounded-md" style={{ backgroundColor: '#eee', border: '2px', borderRadius: '5px', padding: '16px', margin: '16px 0' }}>
-                <h2 className="text-2xl font-bold mb-4" style={{ color: '#660033' }}>Support</h2>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  We are here to help! If you are experiencing technical issues or have questions about our services,
-                  please don't hesitate to reach out. Our support team is available to assist you.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  You can contact us via phone, email, or by filling out the contact form below. We strive to provide
-                  prompt and effective support to ensure your technology runs smoothly.
-                </p>
-              </div>
+          <h2 className="text-2xl font-bold mb-4" style={{ color: '#660033' }}>Technical Support</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Our experienced support team is available to assist you with all your technology needs. We provide comprehensive support services to keep your systems running smoothly.
+          </p>
 
-              {/* Contact Form */}
-              <div className="bg-white shadow-lg rounded-lg p-8 border border-gray-200">
-                <h3 className="text-lg font-bold mb-4" style={{ color: '#660033' }}>Contact Support</h3>
-                <form className="space-y-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-                    <input type="text" id="name" name="name" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent" />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" name="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent" />
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-                    <textarea id="message" name="message" rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
-                  </div>
-                  <div>
-                    <button type="submit" className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200">Submit</button>
-                  </div>
-                </form>
-              </div>
+          {/* Action Buttons - Horizontal Layout */}
+          <div className="flex justify-center gap-4 mt-6 mb-8">
+            <button 
+              onClick={() => window.location.href = '/contact-form'}
+              className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm h-16 flex items-center justify-center"
+            >
+              📞 BOOK A 15 MINUTE CALL
+            </button>
+            <button 
+              onClick={() => window.location.href = '/contact-form'}
+              className="bg-red-500 hover:bg-red-600 text-white font-bold px-6 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm h-16 flex items-center justify-center"
+            >
+              🔒 FREE CYBERSECURITY SCAN
+            </button>
+            <button 
+              onClick={() => window.location.href = '/contact-form'}
+              className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-6 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm h-16 flex items-center justify-center"
+            >
+              🔧 SCHEDULE ON-SITE SERVICE
+            </button>
+          </div>
+
+          {/* Support Overview */}
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="bg-white p-5 border border-gray-200 shadow-sm">
+              <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Remote Support</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Fast and efficient remote support services to resolve your technical issues quickly. Our technicians can remotely access your computer to diagnose and fix problems.
+              </p>
             </div>
-
-            {/* Sidebar */}
-            <div className="w-72">
-              {/* Quick Contact */}
-              <div className="text-white p-4 mb-6" style={{ backgroundColor: '#660033' }}>
-                <h3 className="text-lg font-bold mb-3">Quick Contact</h3>
-                <div className="text-sm space-y-2">
-                  <div>📞 (555) 123-4567</div>
-                  <div>📧 info@cesitservice.com</div>
-                  <div>📍 123 Tech Street<br />Computer City, TC 12345</div>
-                </div>
-              </div>
-
-              {/* Business Hours */}
-              <div className="p-4 mb-6 border border-gray-200" style={{ backgroundColor: '#eee', borderRadius: '5px' }}>
-                <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Business Hours</h3>
-                <div className="text-sm text-gray-700 space-y-1">
-                  <div className="flex justify-between">
-                    <span>Monday - Friday:</span>
-                    <span>8:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Saturday:</span>
-                    <span>9:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday:</span>
-                    <span>Closed</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Emergency Service */}
-              <div className="bg-red-100 border border-red-300 p-4 mb-6">
-                <h3 className="text-lg font-bold text-red-800 mb-2">Emergency Service</h3>
-                <p className="text-sm text-red-700 mb-3">
-                  24/7 emergency computer repair available for critical business systems.
-                </p>
-                <div className="text-sm font-bold text-red-800">
-                  Emergency Line: (555) 911-TECH
-                </div>
-              </div>
-
-              {/* Service Areas */}
-              <div className="bg-white p-4 border border-gray-200">
-                <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Service Areas</h3>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• Computer City</li>
-                  <li>• Tech Valley</li>
-                  <li>• Digital Hills</li>
-                  <li>• Cyber Springs</li>
-                  <li>• Data Plains</li>
-                </ul>
-              </div>
+            <div className="bg-white p-5 border border-gray-200 shadow-sm">
+              <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>On-Site Support</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Professional on-site support services for businesses and individuals. Our technicians will come to your location to troubleshoot and repair your computer systems.
+              </p>
+            </div>
+            <div className="bg-white p-5 border border-gray-200 shadow-sm">
+              <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Help Desk Support</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                24/7 help desk support services to provide you with immediate assistance. Our support team is available to answer your questions and resolve your technical issues.
+              </p>
+            </div>
+            <div className="bg-white p-5 border border-gray-200 shadow-sm">
+              <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Emergency Support</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Emergency support services for critical business systems. Our technicians are available 24/7 to resolve your urgent technical issues and minimize downtime.
+              </p>
             </div>
           </div>
         </div>
