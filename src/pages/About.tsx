@@ -1,4 +1,3 @@
-
 const About = () => {
   return (
     <div className="min-h-screen bg-white font-opensans">
@@ -25,65 +24,39 @@ const About = () => {
       <nav className="text-white" style={{ backgroundColor: 'darkslategray' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center">
-            {/* Action Buttons - Left Side */}
-            <div className="flex gap-4 py-2 mr-8">
-              <button 
-                onClick={() => window.location.href = '/contact'}
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-2 py-1.5 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs"
-              >
-                📞 BOOK A 15 MINUTE CALL
-              </button>
-              <button 
-                onClick={() => window.location.href = '/contact'}
-                className="bg-red-500 hover:bg-red-600 text-white font-bold px-2 py-1.5 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs"
-              >
-                🔒 FREE CYBERSECURITY SCAN
-              </button>
-              <button 
-                onClick={() => window.location.href = '/contact'}
-                className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-2 py-1.5 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs"
-              >
-                🔧 SCHEDULE ON-SITE SERVICE
-              </button>
-            </div>
-            
-            {/* Navigation Menu - Right Side */}
-            <ul className="flex">
+            <ul className="flex w-full justify-center">
               <li className="relative group">
-                <a href="/" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Home</a>
+                <a href="/" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">Home</a>
               </li>
               <li className="relative group">
-                <a href="/about" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">About Us</a>
+                <a href="/about" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">About Us</a>
               </li>
               <li className="relative group">
-                <a href="/services" className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Services ▼</a>
+                <a href="/services" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">Managed Services</a>
+              </li>
+              <li className="relative group">
+                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer whitespace-nowrap text-center">Business Solutions ▼</span>
                 <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
-                  <li><a href="/computer-repair" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Computer Repair</a></li>
-                  <li><a href="/network-setup" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Network Setup</a></li>
-                  <li><a href="/data-recovery" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Data Recovery</a></li>
-                  <li><a href="/virus-removal" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Virus Removal</a></li>
-                  <li><a href="/software-installation" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Software Installation</a></li>
-                  <li><a href="/hardware-upgrades" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Hardware Upgrades</a></li>
+                  <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Products</a></li>
+                  <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Cloud Solutions</a></li>
+                  <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Software Solutions</a></li>
+                  <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Forensic Analysis</a></li>
+                  <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Data Recovery</a></li>
+                  <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Disaster Recovery</a></li>
+                  <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Off-Site Backup</a></li>
+                  <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Database Implementation</a></li>
                 </ul>
               </li>
               <li className="relative group">
-                <a href="/solutions" className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Solutions ▼</a>
+                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer whitespace-nowrap text-center">Technical Support ▼</span>
                 <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
-                  <li><a href="/products" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Products</a></li>
-                  <li><a href="/cloud-solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Cloud Solutions</a></li>
-                  <li><a href="/software-solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Software Solutions</a></li>
-                  <li><a href="/forensic-analysis" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Forensic Analysis</a></li>
-                  <li><a href="/data-recovery-business" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Data Recovery</a></li>
-                  <li><a href="/disaster-recovery" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Disaster Recovery</a></li>
-                  <li><a href="/offsite-backup" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Off-Site Backup</a></li>
-                  <li><a href="/database-implementation" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Database Implementation</a></li>
+                  <li><a href="/support" className="block px-4 py-2 hover:bg-gray-600 transition-colors">On-Site Service</a></li>
+                  <li><a href="/support" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Diagnostic and Repairs</a></li>
+                  <li><a href="/support" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Network Management</a></li>
                 </ul>
               </li>
               <li className="relative group">
-                <a href="/support" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Support</a>
-              </li>
-              <li className="relative group">
-                <a href="/contact" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Contact</a>
+                <a href="/contact" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">Contact</a>
               </li>
             </ul>
           </div>
