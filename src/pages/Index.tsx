@@ -25,30 +25,8 @@ const Index = () => {
       <nav className="text-white" style={{ backgroundColor: 'darkslategray' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center">
-            {/* Action Buttons - Left Side */}
-            <div className="flex gap-4 py-2 mr-8">
-              <button 
-                onClick={() => window.location.href = '/contact'}
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-1.5 py-1.5 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs"
-              >
-                📞 BOOK A 15 MINUTE CALL
-              </button>
-              <button 
-                onClick={() => window.location.href = '/contact'}
-                className="bg-red-500 hover:bg-red-600 text-white font-bold px-1.5 py-1.5 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs"
-              >
-                🔒 FREE CYBERSECURITY SCAN
-              </button>
-              <button 
-                onClick={() => window.location.href = '/contact'}
-                className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-1.5 py-1.5 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs"
-              >
-                🔧 SCHEDULE ON-SITE SERVICE
-              </button>
-            </div>
-            
-            {/* Navigation Menu - Right Side */}
-            <ul className="flex">
+            {/* Navigation Menu - Full Width */}
+            <ul className="flex w-full justify-center">
               <li className="relative group">
                 <a href="/" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Home</a>
               </li>
@@ -56,27 +34,27 @@ const Index = () => {
                 <a href="/about" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">About Us</a>
               </li>
               <li className="relative group">
-                <a href="/services" className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Services ▼</a>
+                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Services ▼</span>
                 <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
-                  <li><a href="/computer-repair" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Computer Repair</a></li>
-                  <li><a href="/network-setup" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Network Setup</a></li>
-                  <li><a href="/data-recovery" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Data Recovery</a></li>
-                  <li><a href="/virus-removal" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Virus Removal</a></li>
-                  <li><a href="/software-installation" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Software Installation</a></li>
-                  <li><a href="/hardware-upgrades" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Hardware Upgrades</a></li>
+                  <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Computer Repair</a></li>
+                  <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Network Setup</a></li>
+                  <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Data Recovery</a></li>
+                  <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Virus Removal</a></li>
+                  <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Software Installation</a></li>
+                  <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Hardware Upgrades</a></li>
                 </ul>
               </li>
               <li className="relative group">
-                <a href="/solutions" className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Solutions ▼</a>
+                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Solutions ▼</span>
                 <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
-                  <li><a href="/products" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Products</a></li>
-                  <li><a href="/cloud-solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Cloud Solutions</a></li>
-                  <li><a href="/software-solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Software Solutions</a></li>
-                  <li><a href="/forensic-analysis" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Forensic Analysis</a></li>
-                  <li><a href="/data-recovery-business" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Data Recovery</a></li>
-                  <li><a href="/disaster-recovery" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Disaster Recovery</a></li>
-                  <li><a href="/offsite-backup" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Off-Site Backup</a></li>
-                  <li><a href="/database-implementation" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Database Implementation</a></li>
+                  <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Products</a></li>
+                  <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Cloud Solutions</a></li>
+                  <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Software Solutions</a></li>
+                  <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Forensic Analysis</a></li>
+                  <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Data Recovery</a></li>
+                  <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Disaster Recovery</a></li>
+                  <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Off-Site Backup</a></li>
+                  <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Database Implementation</a></li>
                 </ul>
               </li>
               <li className="relative group">
@@ -115,10 +93,32 @@ const Index = () => {
                   to businesses and individuals for over 15 years. Our experienced technicians are dedicated to 
                   keeping your technology running smoothly and efficiently.
                 </p>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed mb-6">
                   From computer repair and network setup to data recovery and virus removal, we offer comprehensive 
                   solutions for all your technology needs. Contact us today for fast, professional service you can trust.
                 </p>
+                
+                {/* Action Buttons - Centered and Taller */}
+                <div className="flex flex-col items-center gap-4 mt-6">
+                  <button 
+                    onClick={() => window.location.href = '/contact-form'}
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm w-64 h-16 flex items-center justify-center"
+                  >
+                    📞 BOOK A 15 MINUTE CALL
+                  </button>
+                  <button 
+                    onClick={() => window.location.href = '/contact-form'}
+                    className="bg-red-500 hover:bg-red-600 text-white font-bold px-8 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm w-64 h-16 flex items-center justify-center"
+                  >
+                    🔒 FREE CYBERSECURITY SCAN
+                  </button>
+                  <button 
+                    onClick={() => window.location.href = '/contact-form'}
+                    className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-8 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm w-64 h-16 flex items-center justify-center"
+                  >
+                    🔧 SCHEDULE ON-SITE SERVICE
+                  </button>
+                </div>
               </div>
 
               {/* Services Overview */}

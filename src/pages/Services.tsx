@@ -1,8 +1,7 @@
-
 const Services = () => {
   return (
     <div className="min-h-screen bg-white font-opensans">
-      {/* Header Section - matching #headerbgWhite */}
+      {/* Header Section */}
       <div className="bg-white border-b border-gray-300" style={{ backgroundColor: '#fff', fontFamily: 'Open Sans, sans-serif', fontWeight: '500', minHeight: '85px' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center py-3">
@@ -21,34 +20,11 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Navigation Menu - matching #headerbg */}
+      {/* Navigation Menu */}
       <nav className="text-white" style={{ backgroundColor: 'darkslategray' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center">
-            {/* Action Buttons - Left Side */}
-            <div className="flex gap-4 py-2 mr-8">
-              <button 
-                onClick={() => window.location.href = '/contact'}
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-1.5 py-1.5 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs"
-              >
-                📞 BOOK A 15 MINUTE CALL
-              </button>
-              <button 
-                onClick={() => window.location.href = '/contact'}
-                className="bg-red-500 hover:bg-red-600 text-white font-bold px-1.5 py-1.5 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs"
-              >
-                🔒 FREE CYBERSECURITY SCAN
-              </button>
-              <button 
-                onClick={() => window.location.href = '/contact'}
-                className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-1.5 py-1.5 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-xs"
-              >
-                🔧 SCHEDULE ON-SITE SERVICE
-              </button>
-            </div>
-            
-            {/* Navigation Menu - Right Side */}
-            <ul className="flex">
+            <ul className="flex w-full justify-center">
               <li className="relative group">
                 <a href="/" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">Home</a>
               </li>
@@ -56,7 +32,7 @@ const Services = () => {
                 <a href="/about" className="block px-4 py-3 hover:bg-gray-600 transition-colors w-20 text-center">About Us</a>
               </li>
               <li className="relative group">
-                <a href="/services" className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center bg-gray-600">Services ▼</a>
+                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Services ▼</span>
                 <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
                   <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Computer Repair</a></li>
                   <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Network Setup</a></li>
@@ -67,7 +43,7 @@ const Services = () => {
                 </ul>
               </li>
               <li className="relative group">
-                <a href="/solutions" className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Solutions ▼</a>
+                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer w-20 text-center">Solutions ▼</span>
                 <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
                   <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Products</a></li>
                   <li><a href="/solutions" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Cloud Solutions</a></li>
@@ -90,7 +66,7 @@ const Services = () => {
         </div>
       </nav>
 
-      {/* Main Content Area with Datacenter Background */}
+      {/* Main Content */}
       <div 
         className="max-w-6xl mx-auto px-4 py-6 relative"
         style={{
@@ -107,152 +83,103 @@ const Services = () => {
           <div className="flex gap-6">
             {/* Main Content */}
             <div className="flex-1">
-              {/* Page Header */}
+              {/* Welcome Section - using container styling */}
               <div className="p-4 mb-6 rounded-md" style={{ backgroundColor: '#eee', border: '2px', borderRadius: '5px', padding: '16px', margin: '16px 0' }}>
-                <h2 className="text-3xl font-bold mb-4" style={{ color: '#660033' }}>Our IT Services</h2>
+                <h2 className="text-2xl font-bold mb-4" style={{ color: '#660033' }}>Our Services</h2>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  We offer a wide range of computer and IT services to meet your needs.
+                  Our experienced technicians are dedicated to keeping your technology running smoothly and efficiently.
+                </p>
                 <p className="text-gray-700 leading-relaxed">
-                  CES Inc provides comprehensive IT services to keep your technology running smoothly. From hardware repairs to 
-                  network installations, our certified technicians deliver professional solutions tailored to your needs.
+                  From computer repair and network setup to data recovery and virus removal, we offer comprehensive 
+                  solutions for all your technology needs. Contact us today for fast, professional service you can trust.
                 </p>
               </div>
 
-              {/* Service Categories */}
+              {/* Services Overview */}
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-white p-5 border border-gray-200 shadow-sm">
-                  <h3 className="text-xl font-bold mb-3" style={{ color: '#660033' }}>Computer Repair</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                    Expert diagnosis and repair of desktop and laptop computers. We handle everything from hardware 
-                    failures to software issues.
+                  <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Computer Repair</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    Professional diagnosis and repair of desktop and laptop computers. We fix hardware issues, 
+                    replace components, and ensure your computer runs like new.
                   </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Hardware component replacement</li>
-                    <li>• Operating system reinstallation</li>
-                    <li>• Performance optimization</li>
-                    <li>• Blue screen troubleshooting</li>
-                  </ul>
                 </div>
-
                 <div className="bg-white p-5 border border-gray-200 shadow-sm">
-                  <h3 className="text-xl font-bold mb-3" style={{ color: '#660033' }}>Network Setup & Maintenance</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                    Professional network installation and configuration for businesses and homes. Secure, reliable connectivity solutions.
+                  <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Network Setup</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    Complete network installation and configuration for homes and businesses. Secure wireless 
+                    networks, file sharing, and remote access solutions.
                   </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Wireless network configuration</li>
-                    <li>• Router and switch installation</li>
-                    <li>• Network security implementation</li>
-                    <li>• VPN setup and management</li>
-                  </ul>
                 </div>
-
                 <div className="bg-white p-5 border border-gray-200 shadow-sm">
-                  <h3 className="text-xl font-bold mb-3" style={{ color: '#660033' }}>Data Recovery Services</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                    Advanced data recovery from failed hard drives, corrupted storage devices, and accidentally deleted files.
+                  <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Data Recovery</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    Professional data recovery services for crashed hard drives, corrupted files, and deleted data. 
+                    We use advanced tools to recover your valuable information.
                   </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Hard drive recovery</li>
-                    <li>• SSD data restoration</li>
-                    <li>• RAID array reconstruction</li>
-                    <li>• Mobile device recovery</li>
-                  </ul>
                 </div>
-
                 <div className="bg-white p-5 border border-gray-200 shadow-sm">
-                  <h3 className="text-xl font-bold mb-3" style={{ color: '#660033' }}>Virus & Malware Removal</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                    Complete malware removal and system protection. We clean infected systems and implement security measures.
+                  <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Virus Removal</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    Complete virus and malware removal services. We clean infected computers and install 
+                    protection software to prevent future infections.
                   </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Virus scanning and removal</li>
-                    <li>• Spyware elimination</li>
-                    <li>• System security hardening</li>
-                    <li>• Antivirus software installation</li>
-                  </ul>
                 </div>
-
-                <div className="bg-white p-5 border border-gray-200 shadow-sm">
-                  <h3 className="text-xl font-bold mb-3" style={{ color: '#660033' }}>Software Installation & Support</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                    Professional software installation, configuration, and ongoing support for business and personal applications.
-                  </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Operating system installation</li>
-                    <li>• Business software setup</li>
-                    <li>• Driver installation and updates</li>
-                    <li>• Software licensing management</li>
-                  </ul>
-                </div>
-
-                <div className="bg-white p-5 border border-gray-200 shadow-sm">
-                  <h3 className="text-xl font-bold mb-3" style={{ color: '#660033' }}>Hardware Upgrades</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                    Boost your computer's performance with professional hardware upgrades and component installations.
-                  </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Memory (RAM) upgrades</li>
-                    <li>• SSD installation and migration</li>
-                    <li>• Graphics card upgrades</li>
-                    <li>• Power supply replacement</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Service Guarantee */}
-              <div className="bg-green-50 border border-green-200 p-4 rounded-md">
-                <h3 className="text-lg font-bold text-green-800 mb-2">Service Guarantee</h3>
-                <p className="text-sm text-green-700">
-                  All our services come with a 30-day satisfaction guarantee. If you're not completely satisfied with our work, 
-                  we'll make it right at no additional cost.
-                </p>
               </div>
             </div>
 
             {/* Sidebar */}
             <div className="w-72">
-              {/* Service Request */}
+              {/* Quick Contact - using brand colors */}
               <div className="text-white p-4 mb-6" style={{ backgroundColor: '#660033' }}>
-                <h3 className="text-lg font-bold mb-3">Request Service</h3>
-                <p className="text-sm mb-3">Ready to get your technology working perfectly?</p>
-                <button 
-                  onClick={() => window.location.href = '/contact'}
-                  className="w-full bg-white text-purple-800 font-bold py-2 px-4 rounded hover:bg-gray-100 transition-colors"
-                >
-                  Schedule Service
-                </button>
-              </div>
-
-              {/* Service Areas */}
-              <div className="p-4 mb-6 border border-gray-200" style={{ backgroundColor: '#eee', borderRadius: '5px' }}>
-                <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Service Areas</h3>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• Computer City & Surrounding Areas</li>
-                  <li>• Tech Valley Region</li>
-                  <li>• Digital Hills District</li>
-                  <li>• Cyber Springs Community</li>
-                  <li>• Data Plains Territory</li>
-                </ul>
-              </div>
-
-              {/* Pricing Info */}
-              <div className="bg-blue-50 border border-blue-200 p-4 mb-6">
-                <h3 className="text-lg font-bold text-blue-800 mb-2">Transparent Pricing</h3>
-                <div className="text-sm text-blue-700 space-y-2">
-                  <div>Diagnostic: $49</div>
-                  <div>On-site Service: $89/hour</div>
-                  <div>Remote Support: $59/hour</div>
-                  <div className="text-xs">*Diagnostic fee waived with repair</div>
+                <h3 className="text-lg font-bold mb-3">Quick Contact</h3>
+                <div className="text-sm space-y-2">
+                  <div>📞 (555) 123-4567</div>
+                  <div>📧 info@cesitservice.com</div>
+                  <div>📍 123 Tech Street<br />Computer City, TC 12345</div>
                 </div>
               </div>
 
-              {/* Certifications */}
+              {/* Business Hours - using container styling */}
+              <div className="p-4 mb-6 border border-gray-200" style={{ backgroundColor: '#eee', borderRadius: '5px' }}>
+                <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Business Hours</h3>
+                <div className="text-sm text-gray-700 space-y-1">
+                  <div className="flex justify-between">
+                    <span>Monday - Friday:</span>
+                    <span>8:00 AM - 6:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Saturday:</span>
+                    <span>9:00 AM - 4:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Sunday:</span>
+                    <span>Closed</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Emergency Service */}
+              <div className="bg-red-100 border border-red-300 p-4 mb-6">
+                <h3 className="text-lg font-bold text-red-800 mb-2">Emergency Service</h3>
+                <p className="text-sm text-red-700 mb-3">
+                  24/7 emergency computer repair available for critical business systems.
+                </p>
+                <div className="text-sm font-bold text-red-800">
+                  Emergency Line: (555) 911-TECH
+                </div>
+              </div>
+
+              {/* Service Areas */}
               <div className="bg-white p-4 border border-gray-200">
-                <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Certifications</h3>
+                <h3 className="text-lg font-bold mb-3" style={{ color: '#660033' }}>Service Areas</h3>
                 <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• CompTIA A+ Certified</li>
-                  <li>• Microsoft Certified Professional</li>
-                  <li>• Cisco Network Associate</li>
-                  <li>• Apple Certified Technician</li>
+                  <li>• Computer City</li>
+                  <li>• Tech Valley</li>
+                  <li>• Digital Hills</li>
+                  <li>• Cyber Springs</li>
+                  <li>• Data Plains</li>
                 </ul>
               </div>
             </div>
@@ -273,10 +200,10 @@ const Services = () => {
             <div>
               <h4 className="font-bold mb-3">Services</h4>
               <ul className="text-sm text-gray-300 space-y-1">
-                <li><a href="/services" className="hover:text-white">Computer Repair</a></li>
-                <li><a href="/services" className="hover:text-white">Network Setup</a></li>
-                <li><a href="/services" className="hover:text-white">Data Recovery</a></li>
-                <li><a href="/services" className="hover:text-white">Virus Removal</a></li>
+                <li><a href="/computer-repair" className="hover:text-white">Computer Repair</a></li>
+                <li><a href="/network-setup" className="hover:text-white">Network Setup</a></li>
+                <li><a href="/data-recovery" className="hover:text-white">Data Recovery</a></li>
+                <li><a href="/virus-removal" className="hover:text-white">Virus Removal</a></li>
               </ul>
             </div>
             <div>
