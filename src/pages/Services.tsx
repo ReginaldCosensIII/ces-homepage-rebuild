@@ -32,15 +32,7 @@ const Services = () => {
                 <a href="/about" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">About Us</a>
               </li>
               <li className="relative group">
-                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer whitespace-nowrap text-center">Managed Services ▼</span>
-                <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
-                  <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Computer Repair</a></li>
-                  <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Network Setup</a></li>
-                  <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Data Recovery</a></li>
-                  <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Virus Removal</a></li>
-                  <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Software Installation</a></li>
-                  <li><a href="/services" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Hardware Upgrades</a></li>
-                </ul>
+                <a href="/services" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">Managed Services</a>
               </li>
               <li className="relative group">
                 <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer whitespace-nowrap text-center">Business Solutions ▼</span>
@@ -56,7 +48,12 @@ const Services = () => {
                 </ul>
               </li>
               <li className="relative group">
-                <a href="/support" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">Support</a>
+                <span className="block px-4 py-3 hover:bg-gray-600 transition-colors cursor-pointer whitespace-nowrap text-center">Technical Support ▼</span>
+                <ul className="absolute left-0 top-full bg-gray-700 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-lg">
+                  <li><a href="/support" className="block px-4 py-2 hover:bg-gray-600 transition-colors">On-Site Service</a></li>
+                  <li><a href="/support" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Diagnostic and Repairs</a></li>
+                  <li><a href="/support" className="block px-4 py-2 hover:bg-gray-600 transition-colors">Network Management</a></li>
+                </ul>
               </li>
               <li className="relative group">
                 <a href="/contact" className="block px-4 py-3 hover:bg-gray-600 transition-colors whitespace-nowrap text-center">Contact</a>
@@ -76,28 +73,6 @@ const Services = () => {
           <p className="text-gray-700 leading-relaxed mb-4">
             Our comprehensive managed services ensure your technology infrastructure runs smoothly and efficiently. We provide proactive monitoring, maintenance, and support to keep your business operations running 24/7.
           </p>
-
-          {/* Action Buttons - Horizontal Layout */}
-          <div className="flex justify-center gap-4 mt-6 mb-8">
-            <button 
-              onClick={() => window.location.href = '/contact-form'}
-              className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm h-16 flex items-center justify-center"
-            >
-              📞 BOOK A 15 MINUTE CALL
-            </button>
-            <button 
-              onClick={() => window.location.href = '/contact-form'}
-              className="bg-red-500 hover:bg-red-600 text-white font-bold px-6 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm h-16 flex items-center justify-center"
-            >
-              🔒 FREE CYBERSECURITY SCAN
-            </button>
-            <button 
-              onClick={() => window.location.href = '/contact-form'}
-              className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-6 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm h-16 flex items-center justify-center"
-            >
-              🔧 SCHEDULE ON-SITE SERVICE
-            </button>
-          </div>
 
           {/* Services Overview */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">
