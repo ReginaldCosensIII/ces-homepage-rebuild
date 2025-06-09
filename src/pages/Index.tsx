@@ -1,4 +1,3 @@
-
 const Index = () => {
   return (
     <div className="min-h-screen bg-white font-opensans">
@@ -67,13 +66,14 @@ const Index = () => {
 
       {/* Main Content Area with Datacenter Background */}
       <div 
-        className="min-h-screen w-full"
+        className="relative"
         style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          minHeight: 'calc(100vh - 85px - 48px)' // Subtract header and nav height
         }}
       >
         {/* Overlay for better text readability */}
@@ -214,7 +214,7 @@ const Index = () => {
       </div>
 
       {/* Footer - using darkslategray */}
-      <footer className="text-white mt-12" style={{ backgroundColor: 'darkslategray' }}>
+      <footer className="text-white mt-0" style={{ backgroundColor: 'darkslategray' }}>
         <div className="max-w-6xl mx-auto px-4 py-6">
           <div className="grid md:grid-cols-3 gap-6">
             <div>
