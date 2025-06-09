@@ -1,5 +1,4 @@
 
-
 const Index = () => {
   return (
     <div className="min-h-screen bg-white font-opensans">
@@ -8,7 +7,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center py-3">
             <div className="flex items-center">
-              <img src="/placeholder.svg" alt="CES Inc Logo" className="w-12 h-12 mr-3" />
+              <img src="/lovable-uploads/df3f5481-0db7-4c32-9040-3351fb72b1b0.png" alt="CES Inc Logo" className="w-12 h-12 mr-3" />
               <div>
                 <h1 className="text-2xl font-bold" style={{ color: '#660033' }}>CES Inc</h1>
                 <p className="text-sm text-gray-600">Computer Enhancement Systems Inc</p>
@@ -68,18 +67,19 @@ const Index = () => {
 
       {/* Main Content Area with Datacenter Background */}
       <div 
-        className="max-w-6xl mx-auto px-4 py-6 relative"
+        className="min-h-screen w-full"
         style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          backgroundAttachment: 'fixed',
+          backgroundRepeat: 'no-repeat'
         }}
       >
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-white bg-opacity-90"></div>
         
-        <div className="relative z-10">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 py-6">
           <div className="flex gap-6">
             {/* Main Content */}
             <div className="flex-1">
