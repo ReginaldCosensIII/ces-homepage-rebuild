@@ -1,3 +1,4 @@
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-white font-opensans">
@@ -64,11 +65,11 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Main Content Area with Datacenter Background */}
+      {/* Main Content Area with Cyberpunk Background */}
       <div 
         className="relative w-full"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80")',
+          backgroundImage: 'url("/lovable-uploads/d53dea80-6148-42f3-962a-442ee1ce36c5.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',

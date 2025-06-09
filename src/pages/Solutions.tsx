@@ -63,12 +63,24 @@ const Solutions = () => {
         </div>
       </nav>
 
-      {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-4 py-6 relative">
+      {/* Main Content with Cyberpunk Background */}
+      <div 
+        className="relative w-full"
+        style={{
+          backgroundImage: 'url("/lovable-uploads/d53dea80-6148-42f3-962a-442ee1ce36c5.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+          backgroundRepeat: 'no-repeat',
+          minHeight: 'calc(100vh - 133px)',
+          width: '100vw',
+          marginLeft: 'calc(-50vw + 50%)'
+        }}
+      >
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-white bg-opacity-90"></div>
 
-        <div className="relative z-10">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 py-6" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
           <h2 className="text-2xl font-bold mb-4" style={{ color: '#660033' }}>Business Solutions</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             We offer comprehensive business solutions designed to enhance your operational efficiency and drive growth. From strategic technology planning to implementation and ongoing support.
@@ -105,7 +117,7 @@ const Solutions = () => {
       </div>
 
       {/* Footer */}
-      <footer className="text-white mt-12" style={{ backgroundColor: 'darkslategray' }}>
+      <footer className="text-white mt-0" style={{ backgroundColor: 'darkslategray' }}>
         <div className="max-w-6xl mx-auto px-4 py-6">
           <div className="grid md:grid-cols-3 gap-6">
             <div>
