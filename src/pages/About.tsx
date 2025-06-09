@@ -1,3 +1,4 @@
+
 const About = () => {
   return (
     <div className="min-h-screen bg-white font-opensans">
@@ -6,7 +7,7 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center py-3">
             <div className="flex items-center">
-              <img src="/placeholder.svg" alt="CES Inc Logo" className="w-12 h-12 mr-3" />
+              <img src="/lovable-uploads/df3f5481-0db7-4c32-9040-3351fb72b1b0.png" alt="CES Inc Logo" className="w-12 h-12 mr-3" />
               <div>
                 <h1 className="text-2xl font-bold" style={{ color: '#660033' }}>CES Inc</h1>
                 <p className="text-sm text-gray-600">Computer Enhancement Systems Inc</p>
@@ -191,7 +192,10 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-4 py-6">
           <div className="grid md:grid-cols-3 gap-6">
             <div>
-              <h4 className="font-bold mb-3">CES Inc</h4>
+              <div className="flex items-center mb-3">
+                <img src="/lovable-uploads/df3f5481-0db7-4c32-9040-3351fb72b1b0.png" alt="CES Inc Logo" className="w-8 h-8 mr-2" />
+                <h4 className="font-bold">CES Inc</h4>
+              </div>
               <p className="text-sm text-gray-300">
                 Computer Enhancement Systems Inc - Your trusted IT partner since 2008.
               </p>
