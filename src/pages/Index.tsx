@@ -66,20 +66,22 @@ const Index = () => {
 
       {/* Main Content Area with Datacenter Background */}
       <div 
-        className="relative"
+        className="relative w-full"
         style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat',
-          minHeight: 'calc(100vh - 85px - 48px)' // Subtract header and nav height
+          minHeight: 'calc(100vh - 133px)', // Subtract header (85px) and nav (48px) height
+          width: '100vw',
+          marginLeft: 'calc(-50vw + 50%)'
         }}
       >
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-white bg-opacity-90"></div>
         
-        <div className="relative z-10 max-w-6xl mx-auto px-4 py-6">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 py-6" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
           <div className="flex gap-6">
             {/* Main Content */}
             <div className="flex-1">
