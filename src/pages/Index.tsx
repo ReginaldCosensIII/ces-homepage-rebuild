@@ -103,22 +103,22 @@ const Index = () => {
                 <div className="flex justify-center gap-4 mt-6">
                   <button 
                     onClick={() => window.location.href = '/contact-form'}
-                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-4 py-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm flex items-center justify-center"
-                    style={{ height: '72px' }}
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-4 py-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 text-sm flex items-center justify-center"
+                    style={{ height: '72px', animation: 'pulse 3s cubic-bezier(0.4,0,0.6,1) infinite' }}
                   >
                     📞 BOOK A 15 MINUTE CALL
                   </button>
                   <button 
                     onClick={() => window.location.href = '/contact-form'}
-                    className="bg-red-500 hover:bg-red-600 text-white font-bold px-4 py-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm flex items-center justify-center"
-                    style={{ height: '72px' }}
+                    className="bg-red-500 hover:bg-red-600 text-white font-bold px-4 py-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 text-sm flex items-center justify-center"
+                    style={{ height: '72px', animation: 'pulse 3s cubic-bezier(0.4,0,0.6,1) infinite' }}
                   >
                     🔒 FREE CYBERSECURITY SCAN
                   </button>
                   <button 
                     onClick={() => window.location.href = '/contact-form'}
-                    className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-4 py-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 animate-pulse text-sm flex items-center justify-center"
-                    style={{ height: '72px' }}
+                    className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-4 py-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 text-sm flex items-center justify-center"
+                    style={{ height: '72px', animation: 'pulse 3s cubic-bezier(0.4,0,0.6,1) infinite' }}
                   >
                     🔧 SCHEDULE ON-SITE SERVICE
                   </button>
