@@ -2,26 +2,18 @@
 const Index = () => {
   return (
     <div className="min-h-screen bg-white font-opensans">
-      {/* Header Section - with gradient background */}
-      <div 
-        className="border-b border-gray-300" 
-        style={{ 
-          background: 'linear-gradient(180deg, darkslategray 0%, #708090 50%, #f8f9fa 100%)',
-          fontFamily: 'Open Sans, sans-serif', 
-          fontWeight: '500', 
-          minHeight: '85px' 
-        }}
-      >
+      {/* Header Section - matching #headerbgWhite */}
+      <div className="bg-white border-b border-gray-300" style={{ backgroundColor: '#fff', fontFamily: 'Open Sans, sans-serif', fontWeight: '500', minHeight: '85px' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center py-3">
             <div className="flex items-center">
               <img src="/lovable-uploads/df3f5481-0db7-4c32-9040-3351fb72b1b0.png" alt="CES Inc Logo" className="w-12 h-12 mr-3" />
               <div>
-                <h1 className="text-2xl font-bold text-white">CES Inc</h1>
-                <p className="text-sm text-gray-200">Computer Enhancement Systems Inc</p>
+                <h1 className="text-2xl font-bold" style={{ color: '#660033' }}>CES Inc</h1>
+                <p className="text-sm text-gray-600">Computer Enhancement Systems Inc</p>
               </div>
             </div>
-            <div className="text-right text-sm text-white">
+            <div className="text-right text-sm text-gray-700">
               <div>Phone: (555) 123-4567</div>
               <div>Email: info@cesitservice.com</div>
             </div>
@@ -73,33 +65,22 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Main Content Area with Enhanced Gradient Background */}
+      {/* Main Content Area with Cyberpunk Background */}
       <div 
         className="relative w-full"
         style={{
-          background: `
-            linear-gradient(180deg, 
-              darkslategray 0%, 
-              #708090 15%, 
-              #a0a0a0 35%, 
-              #d3d3d3 55%, 
-              #e8e8e8 75%, 
-              #ffffff 100%
-            ),
-            url("/lovable-uploads/d53dea80-6148-42f3-962a-442ee1ce36c5.png")
-          `,
-          backgroundBlendMode: 'overlay',
+          backgroundImage: 'url("/lovable-uploads/d53dea80-6148-42f3-962a-442ee1ce36c5.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat',
-          minHeight: 'calc(100vh - 133px)',
+          minHeight: 'calc(100vh - 133px)', // Subtract header (85px) and nav (48px) height
           width: '100vw',
           marginLeft: 'calc(-50vw + 50%)'
         }}
       >
-        {/* Reduced overlay opacity to let gradient show through */}
-        <div className="absolute inset-0 bg-white bg-opacity-60"></div>
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-white bg-opacity-90"></div>
         
         <div className="relative z-10 max-w-6xl mx-auto px-4 py-6" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
           <div className="flex gap-6">
