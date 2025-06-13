@@ -125,6 +125,49 @@ const Index = () => {
                 </div>
               </div>
 
+              {/* CES Services Highlight Section */}
+              <div className="mb-6">
+                <div className="bg-white p-6 border border-gray-200 shadow-lg rounded-lg">
+                  <div className="flex flex-col md:flex-row items-center gap-6">
+                    <div className="md:w-1/2">
+                      <img 
+                        src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                        alt="Professional IT Services - Monitor showing programming code"
+                        className="w-full h-64 object-cover rounded-lg shadow-md"
+                      />
+                    </div>
+                    <div className="md:w-1/2">
+                      <h3 className="text-2xl font-bold mb-4" style={{ color: '#660033' }}>
+                        Professional IT Solutions for Your Business
+                      </h3>
+                      <p className="text-gray-700 leading-relaxed mb-4">
+                        At CES Inc, we specialize in comprehensive technology solutions that keep your business 
+                        running at peak performance. Our expert team handles everything from network infrastructure 
+                        to cybersecurity, ensuring your systems are secure, efficient, and always available.
+                      </p>
+                      <ul className="text-gray-700 space-y-2">
+                        <li className="flex items-center">
+                          <span className="text-green-600 mr-2">✓</span>
+                          24/7 Network Monitoring & Support
+                        </li>
+                        <li className="flex items-center">
+                          <span className="text-green-600 mr-2">✓</span>
+                          Advanced Cybersecurity Protection
+                        </li>
+                        <li className="flex items-center">
+                          <span className="text-green-600 mr-2">✓</span>
+                          Cloud Solutions & Data Backup
+                        </li>
+                        <li className="flex items-center">
+                          <span className="text-green-600 mr-2">✓</span>
+                          Custom Software Implementation
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* Services Overview */}
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-white p-5 border border-gray-200 shadow-sm">
