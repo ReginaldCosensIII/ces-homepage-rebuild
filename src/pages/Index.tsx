@@ -1,4 +1,3 @@
-
 const Index = () => {
   return (
     <div className="min-h-screen bg-white font-opensans">
@@ -65,24 +64,46 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Main Content Area with Cyberpunk Background */}
+      {/* Hero Section with Background Image */}
       <div 
-        className="relative w-full"
+        className="relative h-96 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url("/lovable-uploads/d53dea80-6148-42f3-962a-442ee1ce36c5.png")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-          backgroundRepeat: 'no-repeat',
-          minHeight: 'calc(100vh - 133px)', // Subtract header (85px) and nav (48px) height
-          width: '100vw',
-          marginLeft: 'calc(-50vw + 50%)'
+          backgroundImage: 'url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80")',
         }}
       >
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-white bg-opacity-90"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         
-        <div className="relative z-10 max-w-6xl mx-auto px-4 py-6" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+        {/* Hero Content */}
+        <div className="relative z-10 flex items-center justify-center h-full">
+          <div className="text-center text-white px-4">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Professional IT Solutions
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+              Reliable computer and IT services for businesses and individuals
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button 
+                onClick={() => window.location.href = '/contact-form'}
+                className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200"
+              >
+                Get Started Today
+              </button>
+              <button 
+                onClick={() => window.location.href = '/services'}
+                className="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-200"
+              >
+                Our Services
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content Area */}
+      <div className="bg-white">
+        <div className="max-w-6xl mx-auto px-4 py-6">
           <div className="flex gap-6">
             {/* Main Content */}
             <div className="flex-1">
